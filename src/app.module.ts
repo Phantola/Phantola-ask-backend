@@ -6,6 +6,7 @@ import { ServicesModule } from './services/services.module';
 
 @Module({
   imports: [RoutesModule, ServicesModule],
+  exports: [RoutesModule, ServicesModule],
   controllers: [AppController],
   providers: [AppService],
 })
