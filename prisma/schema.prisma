@@ -19,6 +19,7 @@ model admin {
 
 model log {
   id        Int      @id @default(autoincrement())
+  isAnswer  Boolean  @default(false)
   stem      String
   writer    String   @default("")
   createdAt DateTime @default(now())

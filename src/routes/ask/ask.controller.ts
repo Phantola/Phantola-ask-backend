@@ -16,6 +16,11 @@ export class AskController {
     await this.askService.createMessage(stem, writer);
   }
 
+  @Post('answer')
+  async postAnswer(@Body('stem') stem: string) {
+    await this.askService.createMessage(stem);
+  }
+
   @Delete('')
   async deleteMessage(@Query('stemId') stemId: number) {
     await this.askService.deleteMessage(stemId);
